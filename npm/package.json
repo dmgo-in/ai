@@ -1,0 +1,18 @@
+{
+  "name": "@dmgo/ai",
+  "version": "1.0.0",
+  "description": "Connect DMGO to Claude Code, Codex, Gemini CLI and Cursor in one command. Your AI designs your Instagram bio page; you publish.",
+  "type": "module",
+  "bin": { "dmgo-ai": "bin/dmgo-ai.mjs" },
+  "files": ["bin", "skills", "README.md", "LICENSE"],
+  "scripts": {
+    "prepack": "node -e \"const fs=require('fs');fs.rmSync('skills',{recursive:true,force:true});fs.cpSync('../skills','skills',{recursive:true});fs.copyFileSync('../LICENSE','LICENSE')\""
+  },
+  "engines": { "node": ">=18" },
+  "keywords": ["dmgo", "mcp", "claude", "codex", "cursor", "gemini", "instagram", "link-in-bio"],
+  "homepage": "https://www.dmgo.in",
+  "repository": { "type": "git", "url": "git+https://github.com/dmgo-in/ai.git", "directory": "npm" },
+  "license": "MIT",
+  "author": "DMGO Technologies <business@dmgo.in>",
+  "publishConfig": { "access": "public" }
+}

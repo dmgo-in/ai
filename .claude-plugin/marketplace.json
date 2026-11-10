@@ -1,0 +1,15 @@
+{
+  "name": "dmgo",
+  "owner": {
+    "name": "DMGO",
+    "url": "https://www.dmgo.in"
+  },
+  "plugins": [
+    {
+      "name": "dmgo",
+      "source": "./",
+      "description": "DMGO connector + bio page design skill for Claude Code."
+    }
+  ],
+  "description": "Official DMGO plugins for Claude Code"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "dmgo",
+  "version": "1.0.0",
+  "description": "Design your DMGO Instagram link-in-bio page with Gemini. Saves drafts only; you publish.",
+  "mcpServers": {
+    "dmgo": { "httpUrl": "https://api.dmgo.in/mcp" }
+  },
+  "contextFileName": "skills/dmgo-bio-page/SKILL.md"
+}

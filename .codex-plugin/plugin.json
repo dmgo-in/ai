@@ -1,0 +1,27 @@
+{
+  "name": "dmgo",
+  "version": "1.0.0",
+  "description": "Design your DMGO Instagram link-in-bio page with Codex. Saves drafts only; you publish.",
+  "author": { "name": "DMGO", "url": "https://www.dmgo.in" },
+  "homepage": "https://www.dmgo.in",
+  "license": "MIT",
+  "keywords": ["dmgo", "instagram", "link-in-bio", "creator", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "DMGO",
+    "shortDescription": "Design your Instagram bio page",
+    "longDescription": "Connect Codex to your DMGO account to design a high-converting link-in-bio page. Codex reads your bio page, products and comment-keyword automations and saves a draft. You review and publish it in DMGO. It can never publish, delete, or see payments, DMs or leads.",
+    "developerName": "DMGO",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://www.dmgo.in",
+    "privacyPolicyURL": "https://www.dmgo.in/privacy-policy.html",
+    "termsOfServiceURL": "https://www.dmgo.in/terms.html",
+    "defaultPrompt": [
+      "Design my DMGO bio page: make it premium and put my best product first"
+    ],
+    "logo": "./.claude-plugin/icon.png",
+    "brandColor": "#6030F0"
+  }
+}

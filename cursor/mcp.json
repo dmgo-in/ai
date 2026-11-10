@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "dmgo": {
+      "url": "https://api.dmgo.in/mcp"
+    }
+  }
+}
