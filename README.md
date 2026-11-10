@@ -109,8 +109,9 @@ the tools return: page content, product titles and prices, Instagram handle and
 public profile. DMGO never sends your followers' phone numbers or emails, your
 payments or your messages. See the [DMGO privacy policy](https://www.dmgo.in/privacy-policy.html).
 
-## Support
+## Support and security
 
-[www.dmgo.in/support](https://www.dmgo.in/support)
+- Help: **support@dmgo.in** or [www.dmgo.in/support](https://www.dmgo.in/support)
+- Security reports: **security@dmgo.in**. See [SECURITY.md](SECURITY.md)
 
 MIT licensed.

@@ -24,4 +24,6 @@ see payments, DMs or leads.
 For Claude (web/app) and ChatGPT, add a custom connector with the URL
 `https://api.dmgo.in/mcp`.
 
+Help: support@dmgo.in · Security: security@dmgo.in
+
 Disconnect anytime: DMGO → Settings → AI connections. Full kit: https://github.com/dmgo-in/ai
