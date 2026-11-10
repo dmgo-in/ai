@@ -36,7 +36,9 @@ turns "set up auto DM on my latest reel" into a finished automation.
 4. Show the creator a short plan before saving, in 3–4 lines: keyword, public reply,
    DM text with its button, and gates. Skip this if they said "just do it".
 5. `dmgo_create_automation`. For reel/post send `public_reply` **and**
-   `public_reply_alternates` (2 more wordings), so replies never look copy-pasted.
+   `public_reply_alternates` (exactly 2 more wordings; required). Also send
+   `dm.alternates` (2–3 rewordings of the DM, same meaning and buttons). DMGO rotates
+   them so replies and DMs never look copy-pasted.
 6. Reply with: what you set up (3 bullets max), the **reviewUrl**, and "open it,
    check it, turn it on". If the result has a `planNote`, pass it on plainly.
 
