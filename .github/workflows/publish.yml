@@ -1,11 +1,11 @@
 name: Publish @dmgo/ai
 
-# Runs when a GitHub release is published. Uses npm Trusted Publishing (OIDC):
-# no npm token is stored anywhere, and every version gets a signed provenance
-# statement that links it to this repository and workflow.
+# Runs when a version tag (v1.2.3) is pushed. Uses npm Trusted Publishing
+# (OIDC): no npm token is stored anywhere, and every version gets a signed
+# provenance statement that links it to this repository and workflow.
 on:
-  release:
-    types: [published]
+  push:
+    tags: ['v*.*.*']
 
 permissions:
   contents: read
@@ -28,7 +28,7 @@ jobs:
       - name: Check the tag matches package.json
         run: |
           v="$(node -p "require('./package.json').version")"
-          test "v$v" = "${GITHUB_REF_NAME}" || { echo "Release tag ${GITHUB_REF_NAME} != package version v$v"; exit 1; }
+          test "v$v" = "${GITHUB_REF_NAME}" || { echo "Tag ${GITHUB_REF_NAME} != package version v$v"; exit 1; }
       - name: Smoke test the installer
         run: node bin/dmgo-ai.mjs --dry-run
       - run: npm publish --access public --provenance
