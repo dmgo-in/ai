@@ -1,6 +1,6 @@
 # DMGO AI
 
-Let your own AI design your Instagram link-in-bio page and set up your Instagram automations on [DMGO](https://www.dmgo.in).
+Let your own AI design your Instagram link-in-bio page, set up your Instagram automations and draft the things you sell on [DMGO](https://www.dmgo.in).
 
 You tell Claude, ChatGPT, Codex or Gemini something like *"make my DMGO page look premium
 and put my course on top."* The AI reads your DMGO account, picks the look and
@@ -12,24 +12,39 @@ The AI picks the reel, writes the public reply, the DM and its button, and saves
 automation **paused**. Say "turn it on" and it goes live. It can also edit or pause your
 existing automations; DMGO notifies you and every AI edit has a one-click **Undo**.
 
+Or ask *"make a ₹99 PDF product called Interview Notes and add a coupon NOTES50 for 50% off,
+first 50 people."* The AI saves the product as a **draft** and the coupon **paused**. You
+upload the file, check the price, publish and switch the coupon on. It can also draft booking
+pages and free lead magnets, tell you how your reels and products did (totals only), and make
+smart links that open outside Instagram (saved paused until you turn them on).
+
 This kit has two parts:
 
 - **The DMGO connector** (MCP server `https://api.dmgo.in/mcp`) gives the AI
   access to your DMGO account. You sign in with your DMGO account. There are no
   API keys to copy.
-- **Two skills**: `dmgo-bio-page` teaches the AI what a high-converting DMGO page
-  looks like (layouts by niche, copy rules, block order), and
+- **Three skills**: `dmgo-bio-page` teaches the AI what a high-converting DMGO page
+  looks like (layouts by niche, copy rules, block order),
   `dmgo-instagram-automation` teaches it good comment-to-DM automations (keywords,
-  replies, DM buttons, follow gate).
+  replies, DM buttons, follow gate), and `dmgo-creator-commerce` covers products,
+  coupons, booking pages, lead magnets, insights, smart links and the one-line launch
+  ("launch my ₹99 notes").
 
 ## What the AI can and can't do
 
 | Can | Can't |
 |---|---|
-| See your bio page, Instagram handles and product list | Publish your bio page without you |
-| Read your public Instagram profile and recent reels, posts and captions | Change or delete anything you made |
-| Save a draft of your bio page | See payments, payouts or billing |
-| Create, edit, pause and (when you say so) turn on Instagram automations: comment → DM, story replies, DM keywords, follow gate, email, reminder | Read your DMs, followers or leads |
+| See your bio page, Instagram handles and product list | Publish your bio page, products, booking pages or lead magnets without you |
+| Read your public Instagram profile and recent reels, posts and captions | Delete anything you made, or change your live products and booking pages (it edits only its own drafts you have not published or edited) |
+| Save a draft of your bio page | Turn on a coupon or a smart link |
+| Create, edit, pause and (when you say so) turn on Instagram automations: comment → DM, story replies, DM keywords, follow gate, email, reminder | Read your DMs, followers, leads, buyers, bookings, orders or the emails people submit |
+| Draft digital products, booking pages and free lead magnets, and add paused coupons | See payouts, bank or billing details |
+| Read totals for up to 90 days: DMs, replies, follows, bio views and clicks, sales and ₹ revenue, sign-ups | Edit, pause or delete your smart links |
+| Make https smart links (saved paused) and list them with click counts | See who clicked a link |
+
+Products, coupons and booking pages are for India-based DMGO accounts, the same as
+selling in the portal. Lead magnets, insights and smart links work everywhere. If you
+connected before, reconnect once and press **Allow** for the new permissions.
 
 You can disconnect any AI app anytime in **DMGO → Settings → AI connections**.
 
@@ -40,7 +55,7 @@ npx @dmgo/ai
 ```
 
 This finds Claude Code, Codex CLI, Gemini CLI and Cursor on your computer, adds
-the DMGO connector and the skill to each one, and tells you how to sign in. It asks
+the DMGO connector and the three skills to each one, and tells you how to sign in. It asks
 before changing anything. Use `npx @dmgo/ai --uninstall` to remove everything.
 
 Skill only (any agent that supports skills):
@@ -109,12 +124,17 @@ Add `cursor/mcp.json` (or the same URL) as a remote MCP server and sign in when 
 > Design my DMGO bio page. I'm a fitness coach. Make it bold and premium, put my
 > best program first and add a WhatsApp button.
 
+> Set up a ₹499 30-minute call, Mon to Fri 6 to 9 pm.
+
+> How did my reels do this week compared to last week?
+
 ## Privacy
 
 The AI app you choose (for example Anthropic or OpenAI) receives the account data
 the tools return: page content, product titles and prices, Instagram handle and
-public profile. DMGO never sends your followers' phone numbers or emails, your
-payments or your messages. See the [DMGO privacy policy](https://www.dmgo.in/privacy-policy.html).
+public profile, and totals such as DM counts, sales count and ₹ revenue. DMGO never
+sends your followers' or buyers' names, phone numbers or emails, your orders or payouts,
+or your messages. See the [DMGO privacy policy](https://www.dmgo.in/privacy-policy.html).
 
 ## Support and security
 

@@ -1,7 +1,7 @@
 {
   "name": "dmgo",
-  "version": "1.1.0",
-  "description": "Design your DMGO link-in-bio page and set up Instagram automations with Codex. Drafts and paused automations only; you publish and turn them on.",
+  "version": "1.2.0",
+  "description": "Design your DMGO link-in-bio page, set up Instagram automations and draft products, coupons, booking pages and lead magnets with Codex. Drafts and paused items only; you publish and turn them on.",
   "author": {
     "name": "DMGO",
     "url": "https://www.dmgo.in"
@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "DMGO",
     "shortDescription": "Design your Instagram bio page",
-    "longDescription": "Connect Codex to your DMGO account to design a high-converting link-in-bio page. Codex reads your bio page, products and comment-keyword automations and saves a draft. You review and publish it in DMGO. It can never publish, delete, or see payments, DMs or leads.",
+    "longDescription": "Connect Codex to your DMGO account to design a high-converting link-in-bio page, set up Instagram automations, draft products, coupons, booking pages and lead magnets, read your totals and make smart links. Everything is saved as a draft or paused; you review, publish and turn things on in DMGO. It can never publish, delete, or see DMs, leads, buyers, orders or payout details.",
     "developerName": "DMGO",
     "category": "Productivity",
     "capabilities": [
@@ -32,7 +32,9 @@
     "privacyPolicyURL": "https://www.dmgo.in/privacy-policy.html",
     "termsOfServiceURL": "https://www.dmgo.in/terms.html",
     "defaultPrompt": [
-      "Design my DMGO bio page: make it premium and put my best product first"
+      "Design my DMGO bio page: make it premium and put my best product first",
+      "Make a ₹99 PDF product called Interview Notes",
+      "How did my reels do this week compared to last week?"
     ],
     "logo": "./.claude-plugin/icon.png",
     "brandColor": "#6030F0"

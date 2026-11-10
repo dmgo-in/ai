@@ -1,7 +1,7 @@
 {
   "name": "dmgo",
-  "version": "1.1.0",
-  "description": "Connect Claude Code to DMGO: your AI designs your Instagram link-in-bio page and sets up Instagram automations. Drafts and paused automations only; you publish and turn them on.",
+  "version": "1.2.0",
+  "description": "Connect Claude Code to DMGO: your AI designs your Instagram link-in-bio page, sets up Instagram automations, drafts products, coupons, booking pages and lead magnets, reads your totals and makes smart links. Drafts and paused items only; you publish and turn them on.",
   "author": {
     "name": "DMGO",
     "url": "https://www.dmgo.in"

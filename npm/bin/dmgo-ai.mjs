@@ -10,7 +10,8 @@
  *
  * It only ever touches the "dmgo" entry it owns: the DMGO MCP server
  * (https://api.dmgo.in/mcp, sign-in with your DMGO account; no keys) and the
- * dmgo-bio-page skill. JSON configs are backed up before they are edited.
+ * DMGO skills (dmgo-bio-page, dmgo-instagram-automation, dmgo-creator-commerce).
+ * JSON configs are backed up before they are edited.
  * Zero dependencies.
  */
 import { spawnSync } from 'node:child_process';
@@ -22,7 +23,7 @@ import { fileURLToPath } from 'node:url';
 
 const SERVER_NAME = 'dmgo';
 const SERVER_URL = process.env.DMGO_MCP_URL || 'https://api.dmgo.in/mcp';
-const SKILL_NAMES = ['dmgo-bio-page', 'dmgo-instagram-automation'];
+const SKILL_NAMES = ['dmgo-bio-page', 'dmgo-instagram-automation', 'dmgo-creator-commerce'];
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const skillSrc = (name) => path.resolve(HERE, '..', 'skills', name);
 

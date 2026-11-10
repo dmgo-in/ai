@@ -7,12 +7,14 @@ npx @dmgo/ai
 ```
 
 It finds Claude Code, Codex CLI, Gemini CLI and Cursor, adds the DMGO connector
-(`https://api.dmgo.in/mcp`) and the `dmgo-bio-page` skill, then helps you sign in
+(`https://api.dmgo.in/mcp`) and three skills (`dmgo-bio-page`, `dmgo-instagram-automation`,
+`dmgo-creator-commerce`), then helps you sign in
 with your DMGO account. There are no API keys.
 
 Then ask your AI: *"Design my DMGO bio page and put my best product first."* It saves a
-**draft**. You review and publish it in DMGO. The AI can never publish, delete, or
-see payments, DMs or leads.
+**draft**. You review and publish it in DMGO. It can also set up paused automations, draft
+products, coupons, booking pages and lead magnets, read your totals and make paused smart
+links. The AI can never publish, delete, or see DMs, leads, buyers, orders or payouts.
 
 | Option | What it does |
 |---|---|

@@ -1,7 +1,7 @@
 {
   "name": "dmgo",
-  "version": "1.1.0",
-  "description": "Design your DMGO link-in-bio page and set up Instagram automations with Gemini. Drafts and paused automations only; you publish and turn them on.",
+  "version": "1.2.0",
+  "description": "Design your DMGO link-in-bio page, set up Instagram automations and draft products, coupons, booking pages and lead magnets with Gemini. Drafts and paused items only; you publish and turn them on.",
   "mcpServers": {
     "dmgo": {
       "httpUrl": "https://api.dmgo.in/mcp"
