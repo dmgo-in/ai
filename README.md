@@ -9,7 +9,8 @@ press **Publish**.
 
 Or ask *"set up a NOTES comment-to-DM automation on my latest reel with a follow gate."*
 The AI picks the reel, writes the public reply, the DM and its button, and saves the
-automation **paused**. You check it in DMGO and turn it on.
+automation **paused**. Say "turn it on" and it goes live. It can also edit or pause your
+existing automations; DMGO notifies you and every AI edit has a one-click **Undo**.
 
 This kit has two parts:
 
@@ -25,10 +26,10 @@ This kit has two parts:
 
 | Can | Can't |
 |---|---|
-| See your bio page, Instagram handles and product list | Publish anything or turn on an automation without you |
+| See your bio page, Instagram handles and product list | Publish your bio page without you |
 | Read your public Instagram profile and recent reels, posts and captions | Change or delete anything you made |
 | Save a draft of your bio page | See payments, payouts or billing |
-| Create Instagram automations (comment → DM, story replies, DM keywords, follow gate, email, reminder), saved paused | Read your DMs, followers or leads |
+| Create, edit, pause and (when you say so) turn on Instagram automations: comment → DM, story replies, DM keywords, follow gate, email, reminder | Read your DMs, followers or leads |
 
 You can disconnect any AI app anytime in **DMGO → Settings → AI connections**.
 
