@@ -22,9 +22,9 @@ import { fileURLToPath } from 'node:url';
 
 const SERVER_NAME = 'dmgo';
 const SERVER_URL = process.env.DMGO_MCP_URL || 'https://api.dmgo.in/mcp';
-const SKILL_NAME = 'dmgo-bio-page';
+const SKILL_NAMES = ['dmgo-bio-page', 'dmgo-instagram-automation'];
 const HERE = path.dirname(fileURLToPath(import.meta.url));
-const SKILL_SRC = path.resolve(HERE, '..', 'skills', SKILL_NAME);
+const skillSrc = (name) => path.resolve(HERE, '..', 'skills', name);
 
 const args = process.argv.slice(2);
 const flag = (f) => args.includes(f);
@@ -86,24 +86,33 @@ function existing(out) {
 }
 
 function copySkill(destRoot) {
-  const dest = path.join(destRoot, SKILL_NAME);
-  if (!fs.existsSync(SKILL_SRC)) throw new Error(`skill files missing in package (${SKILL_SRC})`);
-  if (DRY) {
-    console.log(c.dim(`    would copy skill → ${dest}`));
-    return dest;
+  const dests = [];
+  for (const name of SKILL_NAMES) {
+    const src = skillSrc(name);
+    const dest = path.join(destRoot, name);
+    if (!fs.existsSync(src)) throw new Error(`skill files missing in package (${src})`);
+    if (DRY) {
+      console.log(c.dim(`    would copy skill → ${dest}`));
+    } else {
+      fs.mkdirSync(destRoot, { recursive: true });
+      fs.rmSync(dest, { recursive: true, force: true });
+      fs.cpSync(src, dest, { recursive: true });
+    }
+    dests.push(dest);
   }
-  fs.mkdirSync(destRoot, { recursive: true });
-  fs.rmSync(dest, { recursive: true, force: true });
-  fs.cpSync(SKILL_SRC, dest, { recursive: true });
-  return dest;
+  return dests;
 }
 
 function removeSkill(destRoot) {
-  const dest = path.join(destRoot, SKILL_NAME);
-  if (!fs.existsSync(dest)) return false;
-  if (DRY) console.log(c.dim(`    would remove ${dest}`));
-  else fs.rmSync(dest, { recursive: true, force: true });
-  return true;
+  let removed = false;
+  for (const name of SKILL_NAMES) {
+    const dest = path.join(destRoot, name);
+    if (!fs.existsSync(dest)) continue;
+    if (DRY) console.log(c.dim(`    would remove ${dest}`));
+    else fs.rmSync(dest, { recursive: true, force: true });
+    removed = true;
+  }
+  return removed;
 }
 
 /** Edit one key of a JSON config safely: parse, back up, write. Never clobbers a file it can't parse. */
@@ -266,7 +275,7 @@ async function main() {
         console.log(`  ${c.green('✓')} removed`);
       } else {
         const result = t.install();
-        console.log(`  ${c.green('✓')} ${t.skill ? 'connector + skill ready' : 'connector ready'}`);
+        console.log(`  ${c.green('✓')} ${t.skill ? 'connector + skills ready' : 'connector ready'}`);
         next.push({ t, result });
       }
     } catch (e) {
@@ -298,7 +307,7 @@ async function main() {
     if (hint) console.log(`  • ${t.name}: ${hint}`);
   }
   console.log('  • Claude (web/app) or ChatGPT: Settings → Connectors → add custom connector → ' + SERVER_URL);
-  console.log(`\nThen ask your AI: ${c.bold('"Design my DMGO bio page and put my best product first."')}`);
+  console.log(`\nThen ask your AI: ${c.bold('"Design my DMGO bio page"')} or ${c.bold('"Set up a NOTES auto-DM on my latest reel"')}`);
   console.log(c.dim('Manage or disconnect anytime: DMGO → Settings → AI connections\n'));
 }
 

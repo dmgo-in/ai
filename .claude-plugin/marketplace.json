@@ -8,7 +8,7 @@
     {
       "name": "dmgo",
       "source": "./",
-      "description": "DMGO connector + bio page design skill for Claude Code."
+      "description": "DMGO connector + bio page and Instagram automation skills for Claude Code."
     }
   ],
   "description": "Official DMGO plugins for Claude Code"

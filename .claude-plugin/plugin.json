@@ -1,7 +1,7 @@
 {
   "name": "dmgo",
-  "version": "1.0.0",
-  "description": "Connect Claude Code to DMGO: design your Instagram link-in-bio page with AI. Saves drafts only; you publish.",
+  "version": "1.1.0",
+  "description": "Connect Claude Code to DMGO: your AI designs your Instagram link-in-bio page and sets up Instagram automations. Drafts and paused automations only; you publish and turn them on.",
   "author": {
     "name": "DMGO",
     "url": "https://www.dmgo.in"
@@ -13,7 +13,8 @@
     "instagram",
     "link-in-bio",
     "creator",
-    "mcp"
+    "mcp",
+    "automation"
   ],
   "privacyPolicyUrl": "https://www.dmgo.in/privacy-policy.html",
   "icon": ".claude-plugin/icon.png"

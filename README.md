@@ -1,28 +1,34 @@
 # DMGO AI
 
-Let your own AI design your Instagram link-in-bio page on [DMGO](https://www.dmgo.in).
+Let your own AI design your Instagram link-in-bio page and set up your Instagram automations on [DMGO](https://www.dmgo.in).
 
 You tell Claude, ChatGPT, Codex or Gemini something like *"make my DMGO page look premium
 and put my course on top."* The AI reads your DMGO account, picks the look and
 writes the text, then saves a **draft**. You open DMGO, check the preview and
 press **Publish**.
 
+Or ask *"set up a NOTES comment-to-DM automation on my latest reel with a follow gate."*
+The AI picks the reel, writes the public reply, the DM and its button, and saves the
+automation **paused**. You check it in DMGO and turn it on.
+
 This kit has two parts:
 
 - **The DMGO connector** (MCP server `https://api.dmgo.in/mcp`) gives the AI
   access to your DMGO account. You sign in with your DMGO account. There are no
   API keys to copy.
-- **The `dmgo-bio-page` skill** teaches the AI what a high-converting DMGO page
-  looks like: layouts by niche, copy rules and block order.
+- **Two skills**: `dmgo-bio-page` teaches the AI what a high-converting DMGO page
+  looks like (layouts by niche, copy rules, block order), and
+  `dmgo-instagram-automation` teaches it good comment-to-DM automations (keywords,
+  replies, DM buttons, follow gate).
 
 ## What the AI can and can't do
 
 | Can | Can't |
 |---|---|
-| See your bio page, Instagram handles and product list | Publish anything without you |
-| Read your public Instagram profile and recent reel captions | Delete anything |
+| See your bio page, Instagram handles and product list | Publish anything or turn on an automation without you |
+| Read your public Instagram profile and recent reels, posts and captions | Change or delete anything you made |
 | Save a draft of your bio page | See payments, payouts or billing |
-| | Read your DMs, followers or leads |
+| Create Instagram automations (comment → DM, story replies, DM keywords, follow gate, email, reminder), saved paused | Read your DMs, followers or leads |
 
 You can disconnect any AI app anytime in **DMGO → Settings → AI connections**.
 

@@ -1,7 +1,7 @@
 {
   "name": "@dmgo/ai",
-  "version": "1.0.1",
-  "description": "Connect DMGO to Claude Code, Codex, Gemini CLI and Cursor in one command. Your AI designs your Instagram bio page; you publish.",
+  "version": "1.1.0",
+  "description": "Connect DMGO to Claude Code, Codex, Gemini CLI and Cursor in one command. Your AI designs your Instagram bio page and sets up automations; you publish and turn them on.",
   "type": "module",
   "bin": {
     "dmgo-ai": "bin/dmgo-ai.mjs"
@@ -26,7 +26,8 @@
     "cursor",
     "gemini",
     "instagram",
-    "link-in-bio"
+    "link-in-bio",
+    "automation"
   ],
   "homepage": "https://www.dmgo.in",
   "repository": {
