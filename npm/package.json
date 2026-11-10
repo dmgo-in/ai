@@ -13,6 +13,6 @@
   "homepage": "https://www.dmgo.in",
   "repository": { "type": "git", "url": "git+https://github.com/dmgo-in/ai.git", "directory": "npm" },
   "license": "MIT",
-  "author": "DMGO Technologies <business@dmgo.in>",
+  "author": "DMGO Technologies <dev@dmgo.in>",
   "publishConfig": { "access": "public" }
 }
